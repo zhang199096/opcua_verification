@@ -1,0 +1,16 @@
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
+  xmlns:tns="http://freeopcua/defaults/modeler"
+  targetNamespace="http://freeopcua/defaults/modeler"
+  elementFormDefault="qualified"
+>
+  <xs:annotation>
+    <xs:appinfo>
+      <ua:Model ModelUri="http://freeopcua/defaults/modeler" Version="1.0.0" PublicationDate="2023-09-12T07:23:06Z" />
+    </xs:appinfo>
+  </xs:annotation>
+  
+  <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
+
+</xs:schema>
