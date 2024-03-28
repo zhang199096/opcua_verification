@@ -290,6 +290,7 @@
     <Compile Include="gibh_athena\UAModel.gh.Classes.cs" />
     <Compile Include="gibh_athena\UAModel.gh.Constants.cs" />
     <Compile Include="gibh_athena\UAModel.gh.DataTypes.cs" />
+    <Compile Include="Namespaces.cs" />
     <Compile Include="TestNode\mscADInstance.cs" />
     <Compile Include="TestNode\UAModel.eg.Classes.cs" />
     <Compile Include="TestNode\UAModel.eg.Constants.cs" />

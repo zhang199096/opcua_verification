@@ -8,6 +8,8 @@ using System;
 using System.Collections.Generic;
 using System.IdentityModel.Selectors;
 using System.Linq;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
@@ -15,14 +17,22 @@ using System.Xml;
 namespace opcua_verification
 {
     class VerificationServer : StandardServer
-    {
+    {         /// <summary>
+              /// Admin user.
+              /// </summary>
+        public static string AdminUser { get; set; } = "sysadmin";
+
         /// <summary>
-         /// Initializes the server before it starts up.
-         /// </summary>
-         /// <remarks>
-         /// This method is called before any startup processing occurs. The sub-class may update the 
-         /// configuration object or do any other application specific startup tasks.
-         /// </remarks>
+        /// Admin user password.
+        /// </summary>
+        public static string AdminPassword { get; set; } = "demo";
+        /// <summary>
+        /// Initializes the server before it starts up.
+        /// </summary>
+        /// <remarks>
+        /// This method is called before any startup processing occurs. The sub-class may update the 
+        /// configuration object or do any other application specific startup tasks.
+        /// </remarks>
         protected override void OnServerStarting(ApplicationConfiguration configuration)
         {
             Console.WriteLine("The Server is starting.");
@@ -55,7 +65,7 @@ namespace opcua_verification
                 if (policy.TokenType == UserTokenType.Certificate)
                 {
                     // the name of the element in the configuration file.
-                    XmlQualifiedName qname = new XmlQualifiedName(policy.PolicyId, Opc.Ua.Namespaces.OpcUa);
+                    XmlQualifiedName qname = new XmlQualifiedName(policy.PolicyId, Namespaces.opcVer);
 
                     // find the location of the trusted issuers.
                     CertificateTrustList trustedIssuers = configuration.ParseExtension<CertificateTrustList>(qname);
@@ -116,8 +126,83 @@ namespace opcua_verification
                 return;
             }
         }
+        /// <summary>
+        /// Validates the password for a username token.
+        /// </summary>
+        private void VerifyPassword(string userName, string password)
+        {
+            IntPtr handle = IntPtr.Zero;
 
+            const int LOGON32_PROVIDER_DEFAULT = 0;
+            // const int LOGON32_LOGON_INTERACTIVE = 2;
+            const int LOGON32_LOGON_NETWORK = 3;
+            // const int LOGON32_LOGON_BATCH = 4;
+            // user with permission to configure server
+            if (!(userName == AdminUser && password == AdminPassword))
+            {
+                throw ServiceResultException.Create(StatusCodes.BadUserAccessDenied, "Login failed for user: {0}", userName);
+            }
+            //if (!((userName == DefaultUser && password == DefaultPassword)))
+            //{
+                
+            //}
+                //bool result = NativeMethods.LogonUser(
+                //userName,
+                //String.Empty,
+                //password,
+                //LOGON32_LOGON_NETWORK,
+                //LOGON32_PROVIDER_DEFAULT,
+                //ref handle);
 
+            //if (!result)
+            //{
+            //    throw ServiceResultException.Create(StatusCodes.BadUserAccessDenied, "Login failed for user: {0}", userName);
+            //}
+
+            NativeMethods.CloseHandle(handle);
+        }
+
+        /// <summary>
+        /// Verifies that a certificate user token is trusted.
+        /// </summary>
+        private void VerifyCertificate(X509Certificate2 certificate)
+        {
+            try
+            {
+                m_certificateValidator.Validate(certificate);
+            }
+            catch (Exception e)
+            {
+                // construct translation object with default text.
+                TranslationInfo info = new TranslationInfo(
+                    "InvalidCertificate",
+                    "en-US",
+                    "'{0}' is not a trusted user certificate.",
+                    certificate.Subject);
+
+                // create an exception with a vendor defined sub-code.
+                throw new ServiceResultException(new ServiceResult(
+                    e,
+                    StatusCodes.BadIdentityTokenRejected,
+                    "InvalidCertificate",
+                    Namespaces.opcVer,
+                    new LocalizedText(info)));
+            }
+        }
+        private static class NativeMethods
+        {
+            [DllImport("advapi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+            public static extern bool LogonUser(
+                string lpszUsername,
+                string lpszDomain,
+                string lpszPassword,
+                int dwLogonType,
+                int dwLogonProvider,
+                ref IntPtr phToken);
+
+            [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+            public extern static bool CloseHandle(IntPtr handle);
+        }
 
         protected override MasterNodeManager CreateMasterNodeManager(IServerInternal server, ApplicationConfiguration configuration)
         {
@@ -127,7 +212,7 @@ namespace opcua_verification
 
             // create the custom node managers.
             nodeManagers.Add(new VerificationNodeManager(server, configuration));
-            //nodeManagers.Add(new AddNodeManager(server, configuration));
+            nodeManagers.Add(new AddNodeManager(server, configuration));
             //nodeManagers.Add(new FreeUaManager(server, configuration));
             nodeManagers.Add(new gibh_athenaManager(server, configuration));
             // create master node manager.

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace opcua_verification
-{
-    internal static class Program
     {
+    public static class Program
+        {
         /// <summary>
         /// 应用程序的主入口点。
         /// </summary>
@@ -56,7 +56,7 @@ namespace opcua_verification
                 application.LoadApplicationConfiguration("D:/learn_ws/opcuaTools/opcua_verification/opcua_verification/opcua_verification/VerificationServer.Config.xml", false).Wait();
 
                 // check the application certificate.
-                application.CheckApplicationInstanceCertificate(false, 0).Wait();
+               application.CheckApplicationInstanceCertificate(false, 0).ConfigureAwait(false);
 
                 // start the server.
                 application.Start(new VerificationServer()).Wait();
