@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using UAModel.gh;
 
 namespace opcua_verification.gibh_athena
@@ -50,15 +51,20 @@ namespace opcua_verification.gibh_athena
             {
                 LoadPredefinedNodes(SystemContext, externalReferences);
                 BaseObjectState passiveNode = (BaseObjectState)FindPredefinedNode(new NodeId(UAModel.gh.Objects.Athena, NamespaceIndexes[0]), typeof(BaseObjectState));
+                BaseObjectState passiveNode1 = (BaseObjectState)FindPredefinedNode(new NodeId(UAModel.gh.Objects.NAEbot, NamespaceIndexes[0]), typeof(BaseObjectState));
                 //AreaState RootArea = (AreaState)FindPredefinedNode(new NodeId(SecCreateLib.Objects.mscInstance_SecProperty, NamespaceIndexes[0]), typeof(AreaState));
                 Athena = new athena_instance(passiveNode, this, new mscTyoeState(passiveNode));
+                naebot =  new naebot_Instance(passiveNode1, this,new NAEBotTypeState(passiveNode1));
                 //m_msc.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, athena_instance.msc);
+                AddPredefinedNode(SystemContext, naebot_Instance.nAEBot);
                 Athena.InitDAMethodState();
+                naebot.InitDAMethodState();
                 // m_msc.InitDAMethodState();
             }
         }
 
         private static athena_instance Athena;
+        private static naebot_Instance naebot;
     }
 }
