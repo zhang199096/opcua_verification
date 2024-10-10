@@ -1,13 +1,11 @@
 ﻿using Opc.Ua.Server;
 using Opc.Ua;
-using opcua_verification.TestNode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Microsoft.TeamFoundation.Common.Internal.NativeMethods;
-using UAModel.eg;
 using UAModel.gh;
 using Microsoft.TeamFoundation.Dashboards.WebApi;
 using opcua_verification.services;

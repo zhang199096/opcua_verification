@@ -1,9 +1,6 @@
 ﻿using Opc.Ua;
 using Opc.Ua.Server;
-using opcua_verification.addDevice;
-using opcua_verification.freeUA;
 using opcua_verification.gibh_athena;
-using opcua_verification.TestNode;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Selectors;
@@ -211,8 +208,8 @@ namespace opcua_verification
             List<INodeManager> nodeManagers = new List<INodeManager>();
 
             // create the custom node managers.
-            nodeManagers.Add(new VerificationNodeManager(server, configuration));
-            nodeManagers.Add(new AddNodeManager(server, configuration));
+            //nodeManagers.Add(new VerificationNodeManager(server, configuration));
+            //nodeManagers.Add(new AddNodeManager(server, configuration));
             //nodeManagers.Add(new FreeUaManager(server, configuration));
             nodeManagers.Add(new gibh_athenaManager(server, configuration));
             // create master node manager.

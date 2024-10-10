@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace opcua_verification
 {
-    [DataContract(Namespace = UAModel.eg.Namespaces.eg)]
+    [DataContract(Namespace = UAModel.gh.Namespaces.gh)]
     public class VerificationServerConfiguration
     {
         public VerificationServerConfiguration()

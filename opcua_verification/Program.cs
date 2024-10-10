@@ -56,7 +56,7 @@ namespace opcua_verification
                 application.LoadApplicationConfiguration("D:/learn_ws/opcuaTools/opcua_verification/opcua_verification/opcua_verification/VerificationServer.Config.xml", false).Wait();
 
                 // check the application certificate.
-               application.CheckApplicationInstanceCertificate(false, 0).ConfigureAwait(false);
+                application.CheckApplicationInstanceCertificate(false, 0).ConfigureAwait(false);
 
                 // start the server.
                 application.Start(new VerificationServer()).Wait();
