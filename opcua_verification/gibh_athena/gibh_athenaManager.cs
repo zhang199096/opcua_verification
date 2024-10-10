@@ -1,5 +1,6 @@
 ﻿using Opc.Ua;
 using Opc.Ua.Server;
+using opcua_verification.services;
 using opcua_verification.TestNode;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace opcua_verification.gibh_athena
         {
             NodeStateCollection predefinedNodes = new NodeStateCollection();
             predefinedNodes.LoadFromBinaryResource(context,
-                "UAModel.gh.PredefinedNodes.uanodes",
+                "gibh_athena/UAModel.gh.PredefinedNodes.uanodes",
                 typeof(gibh_athenaManager).GetTypeInfo().Assembly,
                 true);
             return predefinedNodes;
@@ -53,7 +54,7 @@ namespace opcua_verification.gibh_athena
                 BaseObjectState passiveNode = (BaseObjectState)FindPredefinedNode(new NodeId(UAModel.gh.Objects.Athena, NamespaceIndexes[0]), typeof(BaseObjectState));
                 BaseObjectState passiveNode1 = (BaseObjectState)FindPredefinedNode(new NodeId(UAModel.gh.Objects.NAEbot, NamespaceIndexes[0]), typeof(BaseObjectState));
                 //AreaState RootArea = (AreaState)FindPredefinedNode(new NodeId(SecCreateLib.Objects.mscInstance_SecProperty, NamespaceIndexes[0]), typeof(AreaState));
-                Athena = new athena_instance(passiveNode, this, new mscTyoeState(passiveNode));
+                Athena = new athena_instance(passiveNode, this, new mscTyoeState(passiveNode), new CR3Driver());
                 naebot =  new naebot_Instance(passiveNode1, this,new NAEBotTypeState(passiveNode1));
                 //m_msc.Create(SystemContext, passiveNode);
                 AddPredefinedNode(SystemContext, athena_instance.msc);

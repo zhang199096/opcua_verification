@@ -24,7 +24,7 @@ namespace opcua_verification.TestNode
         {
             NodeStateCollection predefinedNodes = new NodeStateCollection();
             predefinedNodes.LoadFromBinaryResource(context,
-                "UAModel.eg.PredefinedNodes.uanodes",
+                "TestNode/UAModel.eg.PredefinedNodes.uanodes",
                 typeof(VerificationNodeManager).GetTypeInfo().Assembly,
                 true);
             return predefinedNodes;

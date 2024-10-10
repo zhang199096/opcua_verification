@@ -13,4 +13,42 @@
   
   <xs:import namespace="http://opcfoundation.org/UA/2008/02/Types.xsd" />
 
+  <xs:complexType name="Descartes">
+    <xs:sequence>
+      <xs:element name="x" type="xs:float" minOccurs="0" />
+      <xs:element name="y" type="xs:float" minOccurs="0" />
+      <xs:element name="z" type="xs:float" minOccurs="0" />
+      <xs:element name="rx" type="xs:float" minOccurs="0" />
+      <xs:element name="ry" type="xs:float" minOccurs="0" />
+      <xs:element name="rz" type="xs:float" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Descartes" type="tns:Descartes" />
+
+  <xs:complexType name="ListOfDescartes">
+    <xs:sequence>
+      <xs:element name="Descartes" type="tns:Descartes" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfDescartes" type="tns:ListOfDescartes" nillable="true"></xs:element>
+
+  <xs:complexType name="DesType">
+    <xs:sequence>
+      <xs:element name="X" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+      <xs:element name="Y" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+      <xs:element name="Z" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+      <xs:element name="A" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+      <xs:element name="B" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+      <xs:element name="C" type="ua:ListOfDouble" minOccurs="0" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DesType" type="tns:DesType" />
+
+  <xs:complexType name="ListOfDesType">
+    <xs:sequence>
+      <xs:element name="DesType" type="tns:DesType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfDesType" type="tns:ListOfDesType" nillable="true"></xs:element>
+
 </xs:schema>

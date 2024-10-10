@@ -1128,6 +1128,7 @@
       <Reference ReferenceType="Organizes">ns=1;i=5001</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5007</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5013</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5036</Reference>
       <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
     </References>
   </UAObjectType>
@@ -1179,6 +1180,14 @@
       <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
     </References>
   </UAObject>
+  <UAObject NodeId="ns=1;i=5036" BrowseName="1:CR3" ParentNodeId="ns=1;i=1006">
+    <DisplayName>CR3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=1014</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=1006</Reference>
+    </References>
+  </UAObject>
   <UAObject NodeId="ns=1;i=5027" BrowseName="1:Athena">
     <DisplayName>Athena</DisplayName>
     <References>
@@ -1186,8 +1195,9 @@
       <Reference ReferenceType="Organizes">ns=1;i=5030</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5032</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5031</Reference>
-      <Reference ReferenceType="Organizes">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5038</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5017</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5057</Reference>
       <Reference ReferenceType="Organizes" IsForward="false">i=85</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1006</Reference>
     </References>
@@ -2130,37 +2140,37 @@
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5042</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5029" BrowseName="1:DualModel" ParentNodeId="ns=1;i=5027">
+  <UAObject NodeId="ns=1;i=5038" BrowseName="1:DualModel" ParentNodeId="ns=1;i=5027">
     <DisplayName>DualModel</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=7024</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=7026</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=7025</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7098</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7100</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7099</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5044</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5043</Reference>
+      <Reference ReferenceType="Organizes">ns=1;i=5054</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5039</Reference>
-      <Reference ReferenceType="Organizes">ns=1;i=5038</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7097</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7101</Reference>
       <Reference ReferenceType="Organizes">ns=1;i=5040</Reference>
-      <Reference ReferenceType="Organizes">ns=1;i=5034</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=7022</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=7027</Reference>
-      <Reference ReferenceType="Organizes">ns=1;i=5035</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1001</Reference>
       <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5027</Reference>
     </References>
   </UAObject>
-  <UAMethod NodeId="ns=1;i=7024" BrowseName="1:Jog" ParentNodeId="ns=1;i=5029" MethodDeclarationId="ns=1;i=7002">
+  <UAMethod NodeId="ns=1;i=7098" BrowseName="1:Jog" ParentNodeId="ns=1;i=5038" MethodDeclarationId="ns=1;i=7002">
     <DisplayName>Jog</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6082</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6083</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6333</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6334</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6082" BrowseName="InputArguments" ParentNodeId="ns=1;i=7024" DataType="i=296" ValueRank="1" ArrayDimensions="4">
+  <UAVariable NodeId="ns=1;i=6333" BrowseName="InputArguments" ParentNodeId="ns=1;i=7098" DataType="i=296" ValueRank="1" ArrayDimensions="4">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:AxisType.1:Jog</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7024</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7098</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2231,168 +2241,168 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6083" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7024" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6334" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7098" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:AxisType.1:Jog</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7024</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7098</Reference>
     </References>
   </UAVariable>
-  <UAMethod NodeId="ns=1;i=7026" BrowseName="1:SetZero" ParentNodeId="ns=1;i=5029" MethodDeclarationId="ns=1;i=7003">
+  <UAMethod NodeId="ns=1;i=7100" BrowseName="1:SetZero" ParentNodeId="ns=1;i=5038" MethodDeclarationId="ns=1;i=7003">
     <DisplayName>SetZero</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6096</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6097</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6337</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6338</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6096" BrowseName="InputArguments" ParentNodeId="ns=1;i=7026" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6337" BrowseName="InputArguments" ParentNodeId="ns=1;i=7100" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:AxisType.1:SetZero</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7026</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7100</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6097" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7026" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6338" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7100" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:AxisType.1:SetZero</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7026</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7100</Reference>
     </References>
   </UAVariable>
-  <UAMethod NodeId="ns=1;i=7025" BrowseName="1:Reset" ParentNodeId="ns=1;i=5029" MethodDeclarationId="ns=1;i=7004">
+  <UAMethod NodeId="ns=1;i=7099" BrowseName="1:Reset" ParentNodeId="ns=1;i=5038" MethodDeclarationId="ns=1;i=7004">
     <DisplayName>Reset</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6084</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6085</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6335</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6336</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6084" BrowseName="InputArguments" ParentNodeId="ns=1;i=7025" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6335" BrowseName="InputArguments" ParentNodeId="ns=1;i=7099" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:AxisType.1:Reset</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7025</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7099</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6085" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7025" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6336" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7099" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:AxisType.1:Reset</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7025</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7099</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5039" BrowseName="1:XUint" ParentNodeId="ns=1;i=5029">
+  <UAObject NodeId="ns=1;i=5044" BrowseName="1:XUint" ParentNodeId="ns=1;i=5038">
     <DisplayName>XUint</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=6127</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6126</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6342</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6341</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
-      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=6127" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5039" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6342" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5044" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>MechineAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5039</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5044</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6126" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5039" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6341" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5044" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>LocalAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5039</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5044</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5038" BrowseName="1:Yuint" ParentNodeId="ns=1;i=5029">
+  <UAObject NodeId="ns=1;i=5043" BrowseName="1:Yuint" ParentNodeId="ns=1;i=5038">
     <DisplayName>Yuint</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=6129</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6128</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6343</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6344</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
-      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=6129" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5038" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6343" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5043" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>MechineAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5043</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6128" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5038" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6344" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5043" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>LocalAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5043</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5040" BrowseName="1:ZUint" ParentNodeId="ns=1;i=5029">
+  <UAObject NodeId="ns=1;i=5054" BrowseName="1:ZUint" ParentNodeId="ns=1;i=5038">
     <DisplayName>ZUint</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=6131</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6130</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6346</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6345</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
-      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=6131" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5040" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6346" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5054" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>MechineAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5054</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6130" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5040" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6345" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5054" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>LocalAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5054</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5034" BrowseName="1:AUint" ParentNodeId="ns=1;i=5029">
+  <UAObject NodeId="ns=1;i=5039" BrowseName="1:AUint" ParentNodeId="ns=1;i=5038">
     <DisplayName>AUint</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=6125</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6124</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6354</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6353</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1002</Reference>
-      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=6125" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5034" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6354" BrowseName="1:MechineAxis" ParentNodeId="ns=1;i=5039" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>MechineAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5034</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5039</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6124" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5034" DataType="UInt32" AccessLevel="3" Historizing="true">
+  <UAVariable NodeId="ns=1;i=6353" BrowseName="1:LocalAxis" ParentNodeId="ns=1;i=5039" DataType="UInt32" AccessLevel="3" Historizing="true">
     <DisplayName>LocalAxis</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5034</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5039</Reference>
     </References>
   </UAVariable>
-  <UAMethod NodeId="ns=1;i=7022" BrowseName="1:Goto" ParentNodeId="ns=1;i=5029" MethodDeclarationId="ns=1;i=7005">
+  <UAMethod NodeId="ns=1;i=7097" BrowseName="1:Goto" ParentNodeId="ns=1;i=5038" MethodDeclarationId="ns=1;i=7005">
     <DisplayName>Goto</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6080</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6081</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6331</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6332</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6080" BrowseName="InputArguments" ParentNodeId="ns=1;i=7022" DataType="i=296" ValueRank="1" ArrayDimensions="3">
+  <UAVariable NodeId="ns=1;i=6331" BrowseName="InputArguments" ParentNodeId="ns=1;i=7097" DataType="i=296" ValueRank="1" ArrayDimensions="3">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:RunModelType.1:Goto</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7022</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7097</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2447,28 +2457,28 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6081" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7022" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6332" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7097" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:RunModelType.1:Goto</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7022</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7097</Reference>
     </References>
   </UAVariable>
-  <UAMethod NodeId="ns=1;i=7027" BrowseName="1:RunScript" ParentNodeId="ns=1;i=5029" MethodDeclarationId="ns=1;i=7006">
+  <UAMethod NodeId="ns=1;i=7101" BrowseName="1:RunScript" ParentNodeId="ns=1;i=5038" MethodDeclarationId="ns=1;i=7006">
     <DisplayName>RunScript</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6098</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6099</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6339</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6340</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6098" BrowseName="InputArguments" ParentNodeId="ns=1;i=7027" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+  <UAVariable NodeId="ns=1;i=6339" BrowseName="InputArguments" ParentNodeId="ns=1;i=7101" DataType="i=296" ValueRank="1" ArrayDimensions="1">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:RunModelType.1:RunScript</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7027</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7101</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2491,39 +2501,39 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6099" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7027" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6340" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7101" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:RunModelType.1:RunScript</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7027</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7101</Reference>
     </References>
   </UAVariable>
-  <UAObject NodeId="ns=1;i=5035" BrowseName="1:IOUint" ParentNodeId="ns=1;i=5029">
+  <UAObject NodeId="ns=1;i=5040" BrowseName="1:IOUint" ParentNodeId="ns=1;i=5038">
     <DisplayName>IOUint</DisplayName>
     <References>
-      <Reference ReferenceType="HasComponent">ns=1;i=7046</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=7045</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6146</Reference>
-      <Reference ReferenceType="HasComponent">ns=1;i=6149</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7103</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7102</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6347</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6348</Reference>
       <Reference ReferenceType="HasTypeDefinition">ns=1;i=1000</Reference>
-      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5029</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5038</Reference>
     </References>
   </UAObject>
-  <UAMethod NodeId="ns=1;i=7046" BrowseName="1:SetIO" ParentNodeId="ns=1;i=5035" MethodDeclarationId="ns=1;i=7000">
+  <UAMethod NodeId="ns=1;i=7103" BrowseName="1:SetIO" ParentNodeId="ns=1;i=5040" MethodDeclarationId="ns=1;i=7000">
     <DisplayName>SetIO</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6150</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6151</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5035</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6351</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6352</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6150" BrowseName="InputArguments" ParentNodeId="ns=1;i=7046" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+  <UAVariable NodeId="ns=1;i=6351" BrowseName="InputArguments" ParentNodeId="ns=1;i=7103" DataType="i=296" ValueRank="1" ArrayDimensions="2">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:IOtype.1:SetIO</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7046</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7103</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2562,28 +2572,28 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6151" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7046" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+  <UAVariable NodeId="ns=1;i=6352" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7103" DataType="i=296" ValueRank="1" ArrayDimensions="0">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:IOtype.1:SetIO</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7046</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7103</Reference>
     </References>
   </UAVariable>
-  <UAMethod NodeId="ns=1;i=7045" BrowseName="1:ReadIO" ParentNodeId="ns=1;i=5035" MethodDeclarationId="ns=1;i=7001">
+  <UAMethod NodeId="ns=1;i=7102" BrowseName="1:ReadIO" ParentNodeId="ns=1;i=5040" MethodDeclarationId="ns=1;i=7001">
     <DisplayName>ReadIO</DisplayName>
     <References>
-      <Reference ReferenceType="HasProperty">ns=1;i=6147</Reference>
-      <Reference ReferenceType="HasProperty">ns=1;i=6148</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5035</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6349</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6350</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
     </References>
   </UAMethod>
-  <UAVariable NodeId="ns=1;i=6147" BrowseName="InputArguments" ParentNodeId="ns=1;i=7045" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+  <UAVariable NodeId="ns=1;i=6349" BrowseName="InputArguments" ParentNodeId="ns=1;i=7102" DataType="i=296" ValueRank="1" ArrayDimensions="1">
     <DisplayName>InputArguments</DisplayName>
     <Description>the definition of the input argument of method 1:IOtype.1:ReadIO</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7045</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7102</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2606,12 +2616,12 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6148" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7045" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+  <UAVariable NodeId="ns=1;i=6350" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7102" DataType="i=296" ValueRank="1" ArrayDimensions="1">
     <DisplayName>OutputArguments</DisplayName>
     <Description>the definition of the output arguments of method 1:IOtype.1:ReadIO</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
-      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7045</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7102</Reference>
     </References>
     <Value>
       <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
@@ -2634,18 +2644,18 @@
       </ListOfExtensionObject>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6146" BrowseName="1:Input1States" ParentNodeId="ns=1;i=5035" DataType="UInt32" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=6347" BrowseName="1:Input1States" ParentNodeId="ns=1;i=5040" DataType="UInt32" AccessLevel="3">
     <DisplayName>Input1States</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5035</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=6149" BrowseName="1:Input2States" ParentNodeId="ns=1;i=5035" DataType="UInt32" AccessLevel="3">
+  <UAVariable NodeId="ns=1;i=6348" BrowseName="1:Input2States" ParentNodeId="ns=1;i=5040" DataType="UInt32" AccessLevel="3">
     <DisplayName>Input2States</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
-      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5035</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5040</Reference>
     </References>
   </UAVariable>
   <UAObject NodeId="ns=1;i=5017" BrowseName="1:AutoPlungerp" ParentNodeId="ns=1;i=5027">
@@ -2682,7 +2692,7 @@
   </UAVariable>
   <UAVariable NodeId="ns=1;i=6249" BrowseName="1:Acc" ParentNodeId="ns=1;i=5017" DataType="UInt32" AccessLevel="3">
     <DisplayName>Acc</DisplayName>
-    <Description>acceleration </Description>
+    <Description>acceleration</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5017</Reference>
@@ -3169,6 +3179,504 @@
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7081</Reference>
     </References>
+  </UAVariable>
+  <UAObject NodeId="ns=1;i=5057" BrowseName="1:CR3" ParentNodeId="ns=1;i=5027">
+    <DisplayName>CR3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6367</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6369</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6368</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6370</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6371</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6372</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7108</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7107</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6375</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6376</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6379</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7106</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7110</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7024</Reference>
+      <Reference ReferenceType="HasTypeDefinition">ns=1;i=1014</Reference>
+      <Reference ReferenceType="Organizes" IsForward="false">ns=1;i=5027</Reference>
+    </References>
+  </UAObject>
+  <UAVariable NodeId="ns=1;i=6367" BrowseName="1:A1" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6369" BrowseName="1:A2" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6368" BrowseName="1:A3" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6370" BrowseName="1:A4" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6371" BrowseName="1:A5" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A5</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6372" BrowseName="1:A6" ParentNodeId="ns=1;i=5057" DataType="Double" AccessLevel="3">
+    <DisplayName>A6</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7108" BrowseName="1:MoveL" ParentNodeId="ns=1;i=5057" MethodDeclarationId="ns=1;i=7088">
+    <DisplayName>MoveL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6380</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6381</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6380" BrowseName="InputArguments" ParentNodeId="ns=1;i=7108" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveL</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7108</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>des</Name>
+              <DataType>
+                <Identifier>ns=1;i=3000</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>des pos</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>speed</Name>
+              <DataType>
+                <Identifier>i=11</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>Run speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6381" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7108" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveL</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7108</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7107" BrowseName="1:MoveJ" ParentNodeId="ns=1;i=5057" MethodDeclarationId="ns=1;i=7089">
+    <DisplayName>MoveJ</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6377</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6378</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6377" BrowseName="InputArguments" ParentNodeId="ns=1;i=7107" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveS</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7107</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Des</Name>
+              <DataType>
+                <Identifier>ns=1;i=3001</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>des</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Speed</Name>
+              <DataType>
+                <Identifier>i=11</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>run speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6378" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7107" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveS</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7107</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6375" BrowseName="1:IP" ParentNodeId="ns=1;i=5057" DataType="String" AccessLevel="3">
+    <DisplayName>IP</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6376" BrowseName="1:isBusy" ParentNodeId="ns=1;i=5057" DataType="Boolean" AccessLevel="3">
+    <DisplayName>isBusy</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6379" BrowseName="1:status" ParentNodeId="ns=1;i=5057" DataType="UInt32" AccessLevel="3">
+    <DisplayName>status</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7106" BrowseName="1:Connect" ParentNodeId="ns=1;i=5057" MethodDeclarationId="ns=1;i=7104">
+    <DisplayName>Connect</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6373</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6374</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6373" BrowseName="InputArguments" ParentNodeId="ns=1;i=7106" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:Connect</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7106</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Ip</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Port</Name>
+              <DataType>
+                <Identifier>i=18807</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6374" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7106" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:Connect</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7106</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7110" BrowseName="1:MoveJ2" ParentNodeId="ns=1;i=5057" MethodDeclarationId="ns=1;i=7109">
+    <DisplayName>MoveJ2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6387</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6388</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6387" BrowseName="InputArguments" ParentNodeId="ns=1;i=7110" DataType="i=296" ValueRank="1" ArrayDimensions="3">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveJ2</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7110</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Pos</Name>
+              <DataType>
+                <Identifier>i=18808</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>pos</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Dir</Name>
+              <DataType>
+                <Identifier>i=18808</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>dir</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Speed</Name>
+              <DataType>
+                <Identifier>i=10</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6388" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7110" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveJ2</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7110</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7024" BrowseName="1:StartTrace" ParentNodeId="ns=1;i=5057" MethodDeclarationId="ns=1;i=7022">
+    <DisplayName>StartTrace</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6082</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6083</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5057</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6082" BrowseName="InputArguments" ParentNodeId="ns=1;i=7024" DataType="i=296" ValueRank="1" ArrayDimensions="3">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:StartTrace</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7024</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Path</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>Scipt path</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>isconst</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>1：default speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>cart</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>1:dicar</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6083" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7024" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:StartTrace</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7024</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>0:sucess</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
   </UAVariable>
   <UAObjectType NodeId="ns=1;i=1007" BrowseName="1:CentrifugeType">
     <DisplayName>CentrifugeType</DisplayName>
@@ -5023,7 +5531,7 @@
   </UAVariable>
   <UAVariable NodeId="ns=1;i=6223" BrowseName="1:Acc" ParentNodeId="ns=1;i=1013" DataType="UInt32" AccessLevel="3">
     <DisplayName>Acc</DisplayName>
-    <Description>acceleration </Description>
+    <Description>acceleration</Description>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
       <Reference ReferenceType="HasModellingRule">i=80</Reference>
@@ -5546,4 +6054,597 @@
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7078</Reference>
     </References>
   </UAVariable>
+  <UAObjectType NodeId="ns=1;i=1014" BrowseName="1:RobotType">
+    <DisplayName>RobotType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasComponent">ns=1;i=6276</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6277</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6278</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6279</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6280</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6281</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7088</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7089</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6286</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6287</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=6288</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7104</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7109</Reference>
+      <Reference ReferenceType="HasComponent">ns=1;i=7022</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=58</Reference>
+    </References>
+  </UAObjectType>
+  <UAVariable NodeId="ns=1;i=6276" BrowseName="1:A1" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A1</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6277" BrowseName="1:A2" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6278" BrowseName="1:A3" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A3</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6279" BrowseName="1:A4" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A4</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6280" BrowseName="1:A5" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A5</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6281" BrowseName="1:A6" ParentNodeId="ns=1;i=1014" DataType="Double" AccessLevel="3">
+    <DisplayName>A6</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7088" BrowseName="1:MoveL" ParentNodeId="ns=1;i=1014">
+    <DisplayName>MoveL</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6282</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6283</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6282" BrowseName="InputArguments" ParentNodeId="ns=1;i=7088" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveL</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7088</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>des</Name>
+              <DataType>
+                <Identifier>ns=1;i=3000</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>des pos</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>speed</Name>
+              <DataType>
+                <Identifier>i=11</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>Run speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6283" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7088" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveL</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7088</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7089" BrowseName="1:MoveJ" ParentNodeId="ns=1;i=1014">
+    <DisplayName>MoveJ</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6284</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6285</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6284" BrowseName="InputArguments" ParentNodeId="ns=1;i=7089" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveS</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7089</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Des</Name>
+              <DataType>
+                <Identifier>ns=1;i=3001</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>des</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Speed</Name>
+              <DataType>
+                <Identifier>i=11</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>run speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6285" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7089" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveS</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7089</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6286" BrowseName="1:IP" ParentNodeId="ns=1;i=1014" DataType="String" AccessLevel="3">
+    <DisplayName>IP</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6287" BrowseName="1:isBusy" ParentNodeId="ns=1;i=1014" DataType="Boolean" AccessLevel="3">
+    <DisplayName>isBusy</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6288" BrowseName="1:status" ParentNodeId="ns=1;i=1014" DataType="UInt32" AccessLevel="3">
+    <DisplayName>status</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=63</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7104" BrowseName="1:Connect" ParentNodeId="ns=1;i=1014">
+    <DisplayName>Connect</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6355</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6356</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6355" BrowseName="InputArguments" ParentNodeId="ns=1;i=7104" DataType="i=296" ValueRank="1" ArrayDimensions="2">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:Connect</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7104</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Ip</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Port</Name>
+              <DataType>
+                <Identifier>i=18807</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6356" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7104" DataType="i=296" ValueRank="1" ArrayDimensions="0">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:Connect</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7104</Reference>
+    </References>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7109" BrowseName="1:MoveJ2" ParentNodeId="ns=1;i=1014">
+    <DisplayName>MoveJ2</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6385</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6386</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6385" BrowseName="InputArguments" ParentNodeId="ns=1;i=7109" DataType="i=296" ValueRank="1" ArrayDimensions="3">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:MoveJ2</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7109</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Pos</Name>
+              <DataType>
+                <Identifier>i=18808</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>pos</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Dir</Name>
+              <DataType>
+                <Identifier>i=18808</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>dir</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Speed</Name>
+              <DataType>
+                <Identifier>i=10</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6386" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7109" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:MoveJ2</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7109</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description />
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAMethod NodeId="ns=1;i=7022" BrowseName="1:StartTrace" ParentNodeId="ns=1;i=1014">
+    <DisplayName>StartTrace</DisplayName>
+    <References>
+      <Reference ReferenceType="HasProperty">ns=1;i=6080</Reference>
+      <Reference ReferenceType="HasProperty">ns=1;i=6081</Reference>
+      <Reference ReferenceType="HasModellingRule">i=80</Reference>
+      <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1014</Reference>
+    </References>
+  </UAMethod>
+  <UAVariable NodeId="ns=1;i=6080" BrowseName="InputArguments" ParentNodeId="ns=1;i=7022" DataType="i=296" ValueRank="1" ArrayDimensions="3">
+    <DisplayName>InputArguments</DisplayName>
+    <Description>the definition of the input argument of method 1:RobotType.1:StartTrace</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7022</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>Path</Name>
+              <DataType>
+                <Identifier>i=12</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>Scipt path</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>isconst</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>1：default speed</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>cart</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>1:dicar</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UAVariable NodeId="ns=1;i=6081" BrowseName="OutputArguments" ParentNodeId="ns=1;i=7022" DataType="i=296" ValueRank="1" ArrayDimensions="1">
+    <DisplayName>OutputArguments</DisplayName>
+    <Description>the definition of the output arguments of method 1:RobotType.1:StartTrace</Description>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+      <Reference ReferenceType="HasModellingRule">i=78</Reference>
+      <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=7022</Reference>
+    </References>
+    <Value>
+      <ListOfExtensionObject xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">
+        <ExtensionObject>
+          <TypeId>
+            <Identifier>i=297</Identifier>
+          </TypeId>
+          <Body>
+            <Argument>
+              <Name>ret</Name>
+              <DataType>
+                <Identifier>i=6</Identifier>
+              </DataType>
+              <ValueRank>-1</ValueRank>
+              <ArrayDimensions />
+              <Description>
+                <Text>0:sucess</Text>
+              </Description>
+            </Argument>
+          </Body>
+        </ExtensionObject>
+      </ListOfExtensionObject>
+    </Value>
+  </UAVariable>
+  <UADataType NodeId="ns=1;i=3000" BrowseName="1:Descartes">
+    <DisplayName>Descartes</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5055</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5056</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:Descartes">
+      <Field Name="x" DataType="i=10" />
+      <Field Name="y" DataType="i=10" />
+      <Field Name="z" DataType="i=10" />
+      <Field Name="rx" DataType="i=10" />
+      <Field Name="ry" DataType="i=10" />
+      <Field Name="rz" DataType="i=10" />
+    </Definition>
+  </UADataType>
+  <UAObject NodeId="ns=1;i=5055" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5056" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+    </References>
+  </UAObject>
+  <UADataType NodeId="ns=1;i=3001" BrowseName="1:DesType">
+    <DisplayName>DesType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5020</Reference>
+      <Reference ReferenceType="HasEncoding">ns=1;i=5021</Reference>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=22</Reference>
+    </References>
+    <Definition Name="1:DesType">
+      <Field Name="X" DataType="i=11" ValueRank="1">
+        <Description>mm</Description>
+      </Field>
+      <Field Name="Y" DataType="i=11" ValueRank="1">
+        <Description>mm</Description>
+      </Field>
+      <Field Name="Z" DataType="i=11" ValueRank="1">
+        <Description>mm</Description>
+      </Field>
+      <Field Name="A" DataType="i=11" ValueRank="1">
+        <Description>mm</Description>
+      </Field>
+      <Field Name="B" DataType="i=11" ValueRank="1" />
+      <Field Name="C" DataType="i=11" ValueRank="1">
+        <Description>mm</Description>
+      </Field>
+    </Definition>
+  </UADataType>
+  <UAObject NodeId="ns=1;i=5020" BrowseName="Default Binary" SymbolicName="DefaultBinary">
+    <DisplayName>Default Binary</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+    </References>
+  </UAObject>
+  <UAObject NodeId="ns=1;i=5021" BrowseName="Default XML" SymbolicName="DefaultXml">
+    <DisplayName>Default XML</DisplayName>
+    <References>
+      <Reference ReferenceType="HasTypeDefinition">i=76</Reference>
+    </References>
+  </UAObject>
+  <UAVariableType NodeId="ns=1;i=2000" BrowseName="1:DesVarType" DataType="ns=1;i=3001">
+    <DisplayName>DesVarType</DisplayName>
+    <References>
+      <Reference ReferenceType="HasSubtype" IsForward="false">i=63</Reference>
+    </References>
+  </UAVariableType>
 </UANodeSet>

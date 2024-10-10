@@ -8,4 +8,28 @@
 >
   <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
 
+  <opc:StructuredType Name="Descartes" BaseType="ua:ExtensionObject">
+    <opc:Field Name="x" TypeName="opc:Float" />
+    <opc:Field Name="y" TypeName="opc:Float" />
+    <opc:Field Name="z" TypeName="opc:Float" />
+    <opc:Field Name="rx" TypeName="opc:Float" />
+    <opc:Field Name="ry" TypeName="opc:Float" />
+    <opc:Field Name="rz" TypeName="opc:Float" />
+  </opc:StructuredType>
+
+  <opc:StructuredType Name="DesType" BaseType="ua:ExtensionObject">
+    <opc:Field Name="NoOfX" TypeName="opc:Int32" />
+    <opc:Field Name="X" TypeName="opc:Double" LengthField="NoOfX" />
+    <opc:Field Name="NoOfY" TypeName="opc:Int32" />
+    <opc:Field Name="Y" TypeName="opc:Double" LengthField="NoOfY" />
+    <opc:Field Name="NoOfZ" TypeName="opc:Int32" />
+    <opc:Field Name="Z" TypeName="opc:Double" LengthField="NoOfZ" />
+    <opc:Field Name="NoOfA" TypeName="opc:Int32" />
+    <opc:Field Name="A" TypeName="opc:Double" LengthField="NoOfA" />
+    <opc:Field Name="NoOfB" TypeName="opc:Int32" />
+    <opc:Field Name="B" TypeName="opc:Double" LengthField="NoOfB" />
+    <opc:Field Name="NoOfC" TypeName="opc:Int32" />
+    <opc:Field Name="C" TypeName="opc:Double" LengthField="NoOfC" />
+  </opc:StructuredType>
+
 </opc:TypeDictionary>

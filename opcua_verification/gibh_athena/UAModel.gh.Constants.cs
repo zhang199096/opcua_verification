@@ -37,6 +37,20 @@ using Opc.Ua;
 
 namespace UAModel.gh
 {
+    #region DataType Identifiers
+    /// <remarks />
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    public static partial class DataTypes
+    {
+        /// <remarks />
+        public const uint Descartes = 3000;
+
+        /// <remarks />
+        public const uint DesType = 3001;
+    }
+    #endregion
+
     #region Method Identifiers
     /// <remarks />
     /// <exclude />
@@ -155,6 +169,21 @@ namespace UAModel.gh
         public const uint PlungerpType_GoAbs = 7078;
 
         /// <remarks />
+        public const uint RobotType_MoveL = 7088;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ = 7089;
+
+        /// <remarks />
+        public const uint RobotType_Connect = 7104;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ2 = 7109;
+
+        /// <remarks />
+        public const uint RobotType_StartTrace = 7022;
+
+        /// <remarks />
         public const string IOtype_SetIOMethodType = "";
 
         /// <remarks />
@@ -210,6 +239,21 @@ namespace UAModel.gh
 
         /// <remarks />
         public const string PlungerpType_GoAbsMethodType = "";
+
+        /// <remarks />
+        public const string RobotType_MoveLMethodType = "";
+
+        /// <remarks />
+        public const string RobotType_MoveJMethodType = "";
+
+        /// <remarks />
+        public const string RobotType_ConnectMethodType = "";
+
+        /// <remarks />
+        public const string RobotType_MoveJ2MethodType = "";
+
+        /// <remarks />
+        public const string RobotType_StartTraceMethodType = "";
     }
     #endregion
 
@@ -256,6 +300,9 @@ namespace UAModel.gh
         public const uint mscTyoe_AutoPlungerp = 5013;
 
         /// <remarks />
+        public const uint mscTyoe_CR3 = 5036;
+
+        /// <remarks />
         public const uint Athena = 5027;
 
         /// <remarks />
@@ -278,6 +325,18 @@ namespace UAModel.gh
 
         /// <remarks />
         public const uint NAEbot = 5022;
+
+        /// <remarks />
+        public const uint Descartes_Encoding_DefaultBinary = 5055;
+
+        /// <remarks />
+        public const uint Descartes_Encoding_DefaultXml = 5056;
+
+        /// <remarks />
+        public const uint DesType_Encoding_DefaultBinary = 5020;
+
+        /// <remarks />
+        public const uint DesType_Encoding_DefaultXml = 5021;
     }
     #endregion
 
@@ -328,6 +387,9 @@ namespace UAModel.gh
 
         /// <remarks />
         public const uint PlungerpType = 1013;
+
+        /// <remarks />
+        public const uint RobotType = 1014;
     }
     #endregion
 
@@ -692,6 +754,36 @@ namespace UAModel.gh
         public const uint mscTyoe_AutoPlungerp_GoAbs_OutputArguments = 6248;
 
         /// <remarks />
+        public const uint mscTyoe_CR3_MoveL_InputArguments = 6282;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_MoveL_OutputArguments = 6283;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_MoveJ_InputArguments = 6284;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_MoveJ_OutputArguments = 6285;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_Connect_InputArguments = 6355;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_Connect_OutputArguments = 6356;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_MoveJ2_InputArguments = 6385;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_MoveJ2_OutputArguments = 6386;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_StartTrace_InputArguments = 6080;
+
+        /// <remarks />
+        public const uint mscTyoe_CR3_StartTrace_OutputArguments = 6081;
+
+        /// <remarks />
         public const uint Athena_Balser_StartCapture_InputArguments = 6212;
 
         /// <remarks />
@@ -788,46 +880,46 @@ namespace UAModel.gh
         public const uint Athena_OpticalModel_IOUint_ReadIO_OutputArguments = 6137;
 
         /// <remarks />
-        public const uint Athena_DualModel_Jog_InputArguments = 6082;
+        public const uint Athena_DualModel_Jog_InputArguments = 6333;
 
         /// <remarks />
-        public const uint Athena_DualModel_Jog_OutputArguments = 6083;
+        public const uint Athena_DualModel_Jog_OutputArguments = 6334;
 
         /// <remarks />
-        public const uint Athena_DualModel_SetZero_InputArguments = 6096;
+        public const uint Athena_DualModel_SetZero_InputArguments = 6337;
 
         /// <remarks />
-        public const uint Athena_DualModel_SetZero_OutputArguments = 6097;
+        public const uint Athena_DualModel_SetZero_OutputArguments = 6338;
 
         /// <remarks />
-        public const uint Athena_DualModel_Reset_InputArguments = 6084;
+        public const uint Athena_DualModel_Reset_InputArguments = 6335;
 
         /// <remarks />
-        public const uint Athena_DualModel_Reset_OutputArguments = 6085;
+        public const uint Athena_DualModel_Reset_OutputArguments = 6336;
 
         /// <remarks />
-        public const uint Athena_DualModel_Goto_InputArguments = 6080;
+        public const uint Athena_DualModel_Goto_InputArguments = 6331;
 
         /// <remarks />
-        public const uint Athena_DualModel_Goto_OutputArguments = 6081;
+        public const uint Athena_DualModel_Goto_OutputArguments = 6332;
 
         /// <remarks />
-        public const uint Athena_DualModel_RunScript_InputArguments = 6098;
+        public const uint Athena_DualModel_RunScript_InputArguments = 6339;
 
         /// <remarks />
-        public const uint Athena_DualModel_RunScript_OutputArguments = 6099;
+        public const uint Athena_DualModel_RunScript_OutputArguments = 6340;
 
         /// <remarks />
-        public const uint Athena_DualModel_IOUint_SetIO_InputArguments = 6150;
+        public const uint Athena_DualModel_IOUint_SetIO_InputArguments = 6351;
 
         /// <remarks />
-        public const uint Athena_DualModel_IOUint_SetIO_OutputArguments = 6151;
+        public const uint Athena_DualModel_IOUint_SetIO_OutputArguments = 6352;
 
         /// <remarks />
-        public const uint Athena_DualModel_IOUint_ReadIO_InputArguments = 6147;
+        public const uint Athena_DualModel_IOUint_ReadIO_InputArguments = 6349;
 
         /// <remarks />
-        public const uint Athena_DualModel_IOUint_ReadIO_OutputArguments = 6148;
+        public const uint Athena_DualModel_IOUint_ReadIO_OutputArguments = 6350;
 
         /// <remarks />
         public const uint Athena_AutoPlungerp_SetSpeed_InputArguments = 6268;
@@ -882,6 +974,36 @@ namespace UAModel.gh
 
         /// <remarks />
         public const uint Athena_AutoPlungerp_GoAbs_OutputArguments = 6257;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveL_InputArguments = 6380;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveL_OutputArguments = 6381;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveJ_InputArguments = 6377;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveJ_OutputArguments = 6378;
+
+        /// <remarks />
+        public const uint Athena_CR3_Connect_InputArguments = 6373;
+
+        /// <remarks />
+        public const uint Athena_CR3_Connect_OutputArguments = 6374;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveJ2_InputArguments = 6387;
+
+        /// <remarks />
+        public const uint Athena_CR3_MoveJ2_OutputArguments = 6388;
+
+        /// <remarks />
+        public const uint Athena_CR3_StartTrace_InputArguments = 6082;
+
+        /// <remarks />
+        public const uint Athena_CR3_StartTrace_OutputArguments = 6083;
 
         /// <remarks />
         public const uint CentrifugeType_Id = 6039;
@@ -1308,6 +1430,88 @@ namespace UAModel.gh
 
         /// <remarks />
         public const uint PlungerpType_GoAbs_OutputArguments = 6248;
+
+        /// <remarks />
+        public const uint RobotType_A1 = 6276;
+
+        /// <remarks />
+        public const uint RobotType_A2 = 6277;
+
+        /// <remarks />
+        public const uint RobotType_A3 = 6278;
+
+        /// <remarks />
+        public const uint RobotType_A4 = 6279;
+
+        /// <remarks />
+        public const uint RobotType_A5 = 6280;
+
+        /// <remarks />
+        public const uint RobotType_A6 = 6281;
+
+        /// <remarks />
+        public const uint RobotType_MoveL_InputArguments = 6282;
+
+        /// <remarks />
+        public const uint RobotType_MoveL_OutputArguments = 6283;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ_InputArguments = 6284;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ_OutputArguments = 6285;
+
+        /// <remarks />
+        public const uint RobotType_IP = 6286;
+
+        /// <remarks />
+        public const uint RobotType_isBusy = 6287;
+
+        /// <remarks />
+        public const uint RobotType_status = 6288;
+
+        /// <remarks />
+        public const uint RobotType_Connect_InputArguments = 6355;
+
+        /// <remarks />
+        public const uint RobotType_Connect_OutputArguments = 6356;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ2_InputArguments = 6385;
+
+        /// <remarks />
+        public const uint RobotType_MoveJ2_OutputArguments = 6386;
+
+        /// <remarks />
+        public const uint RobotType_StartTrace_InputArguments = 6080;
+
+        /// <remarks />
+        public const uint RobotType_StartTrace_OutputArguments = 6081;
+    }
+    #endregion
+
+    #region VariableType Identifiers
+    /// <remarks />
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    public static partial class VariableTypes
+    {
+        /// <remarks />
+        public const uint DesVarType = 2000;
+    }
+    #endregion
+
+    #region DataType Node Identifiers
+    /// <remarks />
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    public static partial class DataTypeIds
+    {
+        /// <remarks />
+        public static readonly ExpandedNodeId Descartes = new ExpandedNodeId(UAModel.gh.DataTypes.Descartes, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId DesType = new ExpandedNodeId(UAModel.gh.DataTypes.DesType, UAModel.gh.Namespaces.gh);
     }
     #endregion
 
@@ -1429,6 +1633,21 @@ namespace UAModel.gh
         public static readonly ExpandedNodeId PlungerpType_GoAbs = new ExpandedNodeId(UAModel.gh.Methods.PlungerpType_GoAbs, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveL = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveL, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveJ, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_Connect = new ExpandedNodeId(UAModel.gh.Methods.RobotType_Connect, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ2 = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveJ2, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_StartTrace = new ExpandedNodeId(UAModel.gh.Methods.RobotType_StartTrace, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
         public static readonly ExpandedNodeId IOtype_SetIOMethodType = new ExpandedNodeId(UAModel.gh.Methods.IOtype_SetIOMethodType, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
@@ -1484,6 +1703,21 @@ namespace UAModel.gh
 
         /// <remarks />
         public static readonly ExpandedNodeId PlungerpType_GoAbsMethodType = new ExpandedNodeId(UAModel.gh.Methods.PlungerpType_GoAbsMethodType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveLMethodType = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveLMethodType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJMethodType = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveJMethodType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_ConnectMethodType = new ExpandedNodeId(UAModel.gh.Methods.RobotType_ConnectMethodType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ2MethodType = new ExpandedNodeId(UAModel.gh.Methods.RobotType_MoveJ2MethodType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_StartTraceMethodType = new ExpandedNodeId(UAModel.gh.Methods.RobotType_StartTraceMethodType, UAModel.gh.Namespaces.gh);
     }
     #endregion
 
@@ -1530,6 +1764,9 @@ namespace UAModel.gh
         public static readonly ExpandedNodeId mscTyoe_AutoPlungerp = new ExpandedNodeId(UAModel.gh.Objects.mscTyoe_AutoPlungerp, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3 = new ExpandedNodeId(UAModel.gh.Objects.mscTyoe_CR3, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
         public static readonly ExpandedNodeId Athena = new ExpandedNodeId(UAModel.gh.Objects.Athena, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
@@ -1552,6 +1789,18 @@ namespace UAModel.gh
 
         /// <remarks />
         public static readonly ExpandedNodeId NAEbot = new ExpandedNodeId(UAModel.gh.Objects.NAEbot, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Descartes_Encoding_DefaultBinary = new ExpandedNodeId(UAModel.gh.Objects.Descartes_Encoding_DefaultBinary, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Descartes_Encoding_DefaultXml = new ExpandedNodeId(UAModel.gh.Objects.Descartes_Encoding_DefaultXml, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId DesType_Encoding_DefaultBinary = new ExpandedNodeId(UAModel.gh.Objects.DesType_Encoding_DefaultBinary, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId DesType_Encoding_DefaultXml = new ExpandedNodeId(UAModel.gh.Objects.DesType_Encoding_DefaultXml, UAModel.gh.Namespaces.gh);
     }
     #endregion
 
@@ -1602,6 +1851,9 @@ namespace UAModel.gh
 
         /// <remarks />
         public static readonly ExpandedNodeId PlungerpType = new ExpandedNodeId(UAModel.gh.ObjectTypes.PlungerpType, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType = new ExpandedNodeId(UAModel.gh.ObjectTypes.RobotType, UAModel.gh.Namespaces.gh);
     }
     #endregion
 
@@ -1966,6 +2218,36 @@ namespace UAModel.gh
         public static readonly ExpandedNodeId mscTyoe_AutoPlungerp_GoAbs_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_AutoPlungerp_GoAbs_OutputArguments, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveL_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveL_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveL_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveL_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveJ_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveJ_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveJ_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveJ_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_Connect_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_Connect_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_Connect_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_Connect_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveJ2_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveJ2_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_MoveJ2_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_MoveJ2_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_StartTrace_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_StartTrace_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId mscTyoe_CR3_StartTrace_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.mscTyoe_CR3_StartTrace_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
         public static readonly ExpandedNodeId Athena_Balser_StartCapture_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_Balser_StartCapture_InputArguments, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
@@ -2156,6 +2438,36 @@ namespace UAModel.gh
 
         /// <remarks />
         public static readonly ExpandedNodeId Athena_AutoPlungerp_GoAbs_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_AutoPlungerp_GoAbs_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveL_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveL_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveL_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveL_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveJ_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveJ_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveJ_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveJ_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_Connect_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_Connect_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_Connect_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_Connect_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveJ2_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveJ2_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_MoveJ2_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_MoveJ2_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_StartTrace_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_StartTrace_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId Athena_CR3_StartTrace_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.Athena_CR3_StartTrace_OutputArguments, UAModel.gh.Namespaces.gh);
 
         /// <remarks />
         public static readonly ExpandedNodeId CentrifugeType_Id = new ExpandedNodeId(UAModel.gh.Variables.CentrifugeType_Id, UAModel.gh.Namespaces.gh);
@@ -2582,6 +2894,74 @@ namespace UAModel.gh
 
         /// <remarks />
         public static readonly ExpandedNodeId PlungerpType_GoAbs_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.PlungerpType_GoAbs_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A1 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A1, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A2 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A2, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A3 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A3, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A4 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A4, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A5 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A5, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_A6 = new ExpandedNodeId(UAModel.gh.Variables.RobotType_A6, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveL_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveL_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveL_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveL_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveJ_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveJ_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_IP = new ExpandedNodeId(UAModel.gh.Variables.RobotType_IP, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_isBusy = new ExpandedNodeId(UAModel.gh.Variables.RobotType_isBusy, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_status = new ExpandedNodeId(UAModel.gh.Variables.RobotType_status, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_Connect_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_Connect_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_Connect_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_Connect_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ2_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveJ2_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_MoveJ2_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_MoveJ2_OutputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_StartTrace_InputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_StartTrace_InputArguments, UAModel.gh.Namespaces.gh);
+
+        /// <remarks />
+        public static readonly ExpandedNodeId RobotType_StartTrace_OutputArguments = new ExpandedNodeId(UAModel.gh.Variables.RobotType_StartTrace_OutputArguments, UAModel.gh.Namespaces.gh);
+    }
+    #endregion
+
+    #region VariableType Node Identifiers
+    /// <remarks />
+    /// <exclude />
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
+    public static partial class VariableTypeIds
+    {
+        /// <remarks />
+        public static readonly ExpandedNodeId DesVarType = new ExpandedNodeId(UAModel.gh.VariableTypes.DesVarType, UAModel.gh.Namespaces.gh);
     }
     #endregion
 
@@ -2590,6 +2970,24 @@ namespace UAModel.gh
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
     public static partial class BrowseNames
     {
+        /// <remarks />
+        public const string A1 = "A1";
+
+        /// <remarks />
+        public const string A2 = "A2";
+
+        /// <remarks />
+        public const string A3 = "A3";
+
+        /// <remarks />
+        public const string A4 = "A4";
+
+        /// <remarks />
+        public const string A5 = "A5";
+
+        /// <remarks />
+        public const string A6 = "A6";
+
         /// <remarks />
         public const string Abs = "Abs";
 
@@ -2630,6 +3028,15 @@ namespace UAModel.gh
         public const string Compensation = "Compensation";
 
         /// <remarks />
+        public const string Connect = "Connect";
+
+        /// <remarks />
+        public const string ConnectMethodType = "ConnectMethodType";
+
+        /// <remarks />
+        public const string CR3 = "CR3";
+
+        /// <remarks />
         public const string CtrlLid = "CtrlLid";
 
         /// <remarks />
@@ -2640,6 +3047,15 @@ namespace UAModel.gh
 
         /// <remarks />
         public const string Dec = "Dec";
+
+        /// <remarks />
+        public const string Descartes = "Descartes";
+
+        /// <remarks />
+        public const string DesType = "DesType";
+
+        /// <remarks />
+        public const string DesVarType = "DesVarType";
 
         /// <remarks />
         public const string DualModel = "DualModel";
@@ -2702,6 +3118,12 @@ namespace UAModel.gh
         public const string IOUint = "IOUint";
 
         /// <remarks />
+        public const string IP = "IP";
+
+        /// <remarks />
+        public const string isBusy = "isBusy";
+
+        /// <remarks />
         public const string Jog = "Jog";
 
         /// <remarks />
@@ -2727,6 +3149,24 @@ namespace UAModel.gh
 
         /// <remarks />
         public const string moduleType = "moduleType";
+
+        /// <remarks />
+        public const string MoveJ = "MoveJ";
+
+        /// <remarks />
+        public const string MoveJ2 = "MoveJ2";
+
+        /// <remarks />
+        public const string MoveJ2MethodType = "MoveJ2MethodType";
+
+        /// <remarks />
+        public const string MoveJMethodType = "MoveJMethodType";
+
+        /// <remarks />
+        public const string MoveL = "MoveL";
+
+        /// <remarks />
+        public const string MoveLMethodType = "MoveLMethodType";
 
         /// <remarks />
         public const string mscTyoe = "mscTyoe";
@@ -2787,6 +3227,9 @@ namespace UAModel.gh
 
         /// <remarks />
         public const string Reset = "Reset";
+
+        /// <remarks />
+        public const string RobotType = "RobotType";
 
         /// <remarks />
         public const string RunModelType = "RunModelType";
@@ -2859,6 +3302,15 @@ namespace UAModel.gh
 
         /// <remarks />
         public const string StartMethodType = "StartMethodType";
+
+        /// <remarks />
+        public const string StartTrace = "StartTrace";
+
+        /// <remarks />
+        public const string StartTraceMethodType = "StartTraceMethodType";
+
+        /// <remarks />
+        public const string status = "status";
 
         /// <remarks />
         public const string Status = "Status";
